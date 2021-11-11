@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+
+/* Base Reset */
+:root {
+    --primary-color: #0284d0;
+    --secondary-color: #28a745;
+    --light-color: #f4f4f4;
+    --dark-color: #333;
+    --max-width: 1200px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    font-family: 'Roboto Slab', serif;
+    background: #fff;
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+h1, h2 {
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+p {
+    margin: 10px 0;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+.category {
+    display: inline-block;
+    color: var(--dark-color);
+    border-bottom: var(--primary-color) 2px dotted;
+    padding-bottom: 2px;
+    margin-bottom: 8px;
+    
+}
+
+ /* NavBar */
+ .navbar {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     color: white;
+     width: 100%;
+     background: rgba(51,51,51,0.5);
+     height: 75px;
+     position: fixed;
+     top: 0px;
+     padding: 0 28px;
+     transition: 0.5s;
+ }
+
+ .navbar.top {
+     background: transparent;
+ }
+
+.navbar a {
+    color: white;
+    padding: 5px 5px;
+    margin: 25px;
+ }
+
+ .navbar ul {
+   display: flex;
+ }
+
+ .navbar .logo {
+     font-weight: 400;
+ }
+
+ .navbar ul i {
+    display: inline;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    border-radius: 30%;
+    
+}
+/* Showcase */
+
+.background1 {
+    background: url(../images/book1.jpg) no-repeat center center/cover;
+}
+
+.hero {
+    height: 100vh;
+    position: relative;
+    color: white;
+}
+
+.hero .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.hero .content h1 {
+   font-size: 55px;
+}
+
+.hero .content p {
+    font-size: 23px;
+    max-width: 600px;
+    margin: 20px 0 30px;
+
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.hero * {
+    z-index: 10;
+}
+
+.content i {
+    width: 100%;
+}
+
+.content input {
+    background-color: transparent;
+    width: 30%;
+    border: none;
+    height: 40px;
+    padding: 20px;
+    font-size: 30px;
+    /* border-bottom: #808080 1px solid; */
+    /* margin: 10px; */
+}
+
+.content input:focus {
+    outline: none;
+    color: white;
+}
+
+/* Home Articles */
+#featured .articles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 1rem;
+}
+
+#featured .articles-container > *:first-child,
+#featured .articles-container > *:last-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    grid-column: 1 / span 2;
+}
+
+#featured .articles-container > *:last-child {
+    grid-column: 2 / span 2;
+
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+}
+
+.footer a {
+    color: white;
+}
+
+.footer a:hover {
+    color: var(--primary-color);
+}
+
+.footer .social > * {
+    margin-right: 30px;
+}
+
+.footer p {
+    margin-right: 25px;
+}
+
+/* .footer .right-shift {
+    padding-left: 400px;
+} */
+
+/* Browse By Category */
+
+
+.cat-container ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 100px;
+
+}
+
+.cat-container ul li {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+/* My Blogs */
+
+.background-img {
+    background: url(../images/book2.jpg) no-repeat center center/cover;
+    position: relative;
+    
+}
+
+.background2 .navbar {
+    z-index: 10;
+}
+
+.background-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.display h2 {
+    margin-top: 80px;
+}
+
+
+.display  h4 {
+    padding-top: 20px;
+}
+
+.display .item-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 3rem;
+    max-width: 1400px;
+}
+
+.display .menu {
+    position: fixed;
+    z-index: 9; 
+    width: 338px;
+    height: 1000px;
+}
+
+.footer {
+    z-index: 10;
+}
+
+.display .articles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    margin-bottom: 100px;
+    grid-column-start: 2; 
+}
+
+.display .articles-container #item1 {
+    grid-column: 1 / span 3;
+}
+
+.display .articles-container p {
+    color: #333;
+}
+
+.display ul {
+    padding-top: 180px;
+}
+
+.display li {
+    border-bottom: #808080 2px dotted;
+    padding:20px;
+}
+
+.display li:hover {
+    cursor: pointer; 
+    color: var(--primary-color);
+}
+
+.display i {
+    margin-right: 10px;
+}
+
+.menu h1 {
+    font-weight: 400;
+    color: white;
+}
+
+/* About */
+
+.background3 {
+    background: url(../images/book3.jpg) no-repeat center center/cover;
+}
+
+/* Sign In */
+
+.background4 {
+    background: white;
+  
+}
+
+/* Mobile */
+@media(max-width: 780px) {
+    .navbar{
+        flex-direction: column;
+        height: 120px;
+        padding: 20px;
+    }
+
+    .navbar .flex-columns .column{
+        flex-direction: column;
+    }
+
+
+    .navbar a {
+        flex-direction: column;
+        padding: 10px 10px;
+        margin: 0 3px;
+    }
+
+    .flex-items {
+        flex-direction: column;
+    } 
+
+    .flex-columns .row .column{
+        flex: 100%;
+        flex-direction: column;
+        max-width: 100%;
+
+    }
+
+    .flex-grid .row {
+        flex: 100%;
+        flex-direction: column;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    #featured .articles-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
+        
+
+    }
+
+}
+
+
+
+
+
